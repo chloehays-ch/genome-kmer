@@ -2,8 +2,7 @@
 
 This project analyzes DNA sequence fragments and computes:
 
--The frequency of each k-mer (substrings of length k)
--The frequency of nucleotides - A, T, C, G - following each k-mer
+-The frequency of each k-mer (substrings of length k) and the frequency of nucleotides - A, T, C, G - following each k-mer
 
 This type of analysis is frequently used in processes such as genome assembly,
 sequence comparison, and motif detection 
