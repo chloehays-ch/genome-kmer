@@ -1,60 +1,33 @@
-## Genome K-mer Counter ##
+# Genome K-mer Analyzer
+##Chloe Hays
 
-This project analyzes DNA sequence fragments and computes:
+## Overview
 
--The frequency of each k-mer (substrings of length k) and the frequency of nucleotides - A, T, C, G - following each k-mer
+This project analyzes DNA sequence fragments by extracting **k-mers** (substrings of length k) and tracking:
+- The total frequency of each k-mer
+- The frequency of each character that immediately follows each k-mer
 
-This type of analysis is frequently used in processes such as genome assembly,
-sequence comparison, and motif detection 
+This is a simplified model of steps used in genome assembly workflows.
 
-## Usage ##
+## Project Structure
 
-Clone the repository:
-https://github.com/chloehays-ch/genome-kmer 
+```text
+project/
+│
+├── corrected_kmer_analyzer.py   # Main program
+├── tests/
+│   └── test_kmer_counter.py     # Pytest test suite
+├── sample_data/
+│   ├── sample_sequences.txt
+│   └── invalid_sequences.txt
+└── README.md
 
-Make sure Python 3 is installed 
+## AI Use Statement
+Portions of this project were developed with assistance from ChatGPT for:
 
-Run the script from the command line:
-python kmer_counter.py input.txt <k> output.txt
-Arguments
-Argument        Description
-input.txt       File containing DNA sequence
-<k>             Length of k-mers
-output.txt      File where results will be written
+- debugging logic errors in k-mer counting
+- designing pytest test cases
+- improving code structure and readability
+- writing documentation
 
-## Usage Example ##
-Input (input.txt)
-
-ACGTTGCACGTT
-Command
-python kmer_counter.py input.txt 3 output.txt
-
-Output (output.txt)
-ACG: 2 -> T:2
-CGT: 2 -> T:2
-GTT: 2 -> G:1, (end):1
-...
-
-## Logic ##
--Reading the DNA sequence from the input file
--Sliding a window of length k across the sequence
--Counting each k-mer occurrence
--Tracking the nucleotide that follows each k-mer
--Writing results in a structured format
-
-## Status and Tests ##
-Work in progress using test-driven development
-This project follows test-driven development (TDD).
-
-Run tests with:
-pytest
-Tests cover:
--Correct k-mer counting
--Accurate nucleotide-following frequencies
--Edge cases and invalid inputs
-
-## AI use statement: ##
-I utilized the AI platform ChatGPT for this assignment to:
--design tests necessary to verify suitability of my script
--debug error messages when running pytests
--verify that my script was accurate and had logical implementations
+All final code was reviewed, tested, and modified by myself. 
