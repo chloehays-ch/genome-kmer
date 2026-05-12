@@ -1,5 +1,5 @@
 # Genome K-mer Analyzer
-##Chloe Hays
+## Chloe Hays
 
 ## Overview
 
@@ -21,6 +21,7 @@ project/
 │   ├── sample_sequences.txt
 │   └── invalid_sequences.txt
 └── README.md
+
 
 ## AI Use Statement
 Portions of this project were developed with assistance from ChatGPT for:
